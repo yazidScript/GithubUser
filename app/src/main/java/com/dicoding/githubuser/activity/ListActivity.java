@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.dicoding.githubuser.R;
-import com.dicoding.githubuser.adapter.AdapterList;
+import com.dicoding.githubuser.adapter.adapter;
 import com.dicoding.githubuser.model.ModelList;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import java.util.List;
 public class ListActivity extends AppCompatActivity {
 
     private List<ModelList> mList;
-    private AdapterList adapter;
+    private adapter madapter;
     //the recyclerview
     private RecyclerView recyclerView;
     private static final int TIME_LIMIT = 1500;
@@ -37,8 +37,8 @@ public class ListActivity extends AppCompatActivity {
                         "yazidScript",
                         R.drawable.avatar,
                         "Yazid Shollakhudin Ainur Khafid",
-                        46,
-                        34,
+                        "46",
+                        "34",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -47,8 +47,8 @@ public class ListActivity extends AppCompatActivity {
                         "janna12",
                         R.drawable.avatar_3,
                         "Janna Aminsalim",
-                        35,
-                        34,
+                        "35",
+                        "34",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -57,8 +57,8 @@ public class ListActivity extends AppCompatActivity {
                         "hafizriy",
                         R.drawable.avatar_2,
                         "Hafiz Riyandi",
-                        57,
-                        14,
+                        "57",
+                        "14",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -67,8 +67,8 @@ public class ListActivity extends AppCompatActivity {
                         "hasansan",
                         R.drawable.avatar_6,
                         "Hasan nurdin",
-                        89,
-                        44,
+                        "89",
+                        "44",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -77,8 +77,8 @@ public class ListActivity extends AppCompatActivity {
                         "abu123",
                         R.drawable.avatar_4,
                         "Qudsy Abu",
-                        2,
-                        14,
+                        "2",
+                        "14",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -87,8 +87,8 @@ public class ListActivity extends AppCompatActivity {
                         "dika098",
                         R.drawable.avatar_5,
                         "Dika mukhlisin",
-                        5,
-                        4,
+                        "5",
+                        "4",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -97,8 +97,8 @@ public class ListActivity extends AppCompatActivity {
                         "rei",
                         R.drawable.avatar_7,
                         "Reinaldi",
-                        103,
-                        130,
+                        "103",
+                        "130",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -107,8 +107,8 @@ public class ListActivity extends AppCompatActivity {
                         "AgusLight",
                         R.drawable.avatar_2,
                         "Agus Purnomo",
-                        27,
-                        4,
+                        "27",
+                        "4",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -117,8 +117,8 @@ public class ListActivity extends AppCompatActivity {
                         "rizal_zal",
                         R.drawable.avatar_8,
                         "Afrizal Sandi",
-                        74,
-                        41,
+                        "74",
+                        "41",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -127,8 +127,8 @@ public class ListActivity extends AppCompatActivity {
                         "dod62",
                         R.drawable.avatar,
                         "Dodi Rahman",
-                        17,
-                        14,
+                        "17",
+                        "14",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -137,8 +137,8 @@ public class ListActivity extends AppCompatActivity {
                         "fakhr",
                         R.drawable.avatar_2,
                         "Fakhrur",
-                        56,
-                        145,
+                        "56",
+                        "145",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
@@ -147,14 +147,14 @@ public class ListActivity extends AppCompatActivity {
                         "angga23",
                         R.drawable.avatar_1,
                         "Angga Amin",
-                        57,
-                        1,
+                        "57",
+                        "1",
                         "Lorem ipsum",
                         "Lorem ipsum dolor sit amet"));
 
 
-        adapter = new AdapterList(this, mList);
-        recyclerView.setAdapter(adapter);
+        madapter = new adapter(this, mList);
+        recyclerView.setAdapter(madapter);
     }
 
     @Override

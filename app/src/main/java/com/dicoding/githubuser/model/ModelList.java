@@ -4,25 +4,32 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class ModelList implements Parcelable {
-    private int ID;
+//    private int ID;
     private String USERNAME;
     private int AVATAR;
     private String NAME;
-    private int FOLLOWER;
-    private int FOLLOWING;
+    private String FOLLOWER;
+    private String FOLLOWING;
     private String COMPANY;
     private String BIO;
 
-    public ModelList(String username, int avatar, String name, int follower, int following, String company, String bio) {
+    public ModelList(String username, int avatar, String name, String follower, String following, String company, String bio) {
+        USERNAME = username;
+        AVATAR = avatar;
+        NAME = name;
+        FOLLOWER = follower;
+        FOLLOWING = following;
+        COMPANY = company;
+        BIO = bio;
     }
 
     public ModelList(Parcel in) {
-        ID = in.readInt();
+//        ID = in.readInt();
         USERNAME = in.readString();
         AVATAR = in.readInt();
         NAME = in.readString();
-        FOLLOWER = in.readInt();
-        FOLLOWING = in.readInt();
+        FOLLOWER = in.readString();
+        FOLLOWING = in.readString();
         COMPANY = in.readString();
         BIO = in.readString();
     }
@@ -38,14 +45,14 @@ public class ModelList implements Parcelable {
             return new ModelList[size];
         }
     };
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+//
+//    public int getID() {
+//        return ID;
+//    }
+//
+//    public void setID(int ID) {
+//        this.ID = ID;
+//    }
 
     public String getNAME() {
         return NAME;
@@ -71,19 +78,19 @@ public class ModelList implements Parcelable {
         this.AVATAR = AVATAR;
     }
 
-    public int getFOLLOWER() {
+    public String getFOLLOWER() {
         return FOLLOWER;
     }
 
-    public void setFOLLOWER(int FOLLOWER) {
+    public void setFOLLOWER(String FOLLOWER) {
         this.FOLLOWER = FOLLOWER;
     }
 
-    public int getFOLLOWING() {
+    public String getFOLLOWING() {
         return FOLLOWING;
     }
 
-    public void setFOLLOWING(int FOLLOWING) {
+    public void setFOLLOWING(String FOLLOWING) {
         this.FOLLOWING = FOLLOWING;
     }
 
@@ -114,12 +121,12 @@ public class ModelList implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(ID);
+//        dest.writeInt(ID);
         dest.writeString(USERNAME);
         dest.writeInt(AVATAR);
         dest.writeString(NAME);
-        dest.writeInt(FOLLOWER);
-        dest.writeInt(FOLLOWING);
+        dest.writeString(FOLLOWER);
+        dest.writeString(FOLLOWING);
         dest.writeString(COMPANY);
         dest.writeString(BIO);
     }
