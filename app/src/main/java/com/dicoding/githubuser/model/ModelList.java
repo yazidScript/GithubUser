@@ -2,17 +2,26 @@ package com.dicoding.githubuser.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.widget.ImageView;
 
 public class ModelList implements Parcelable {
-    private String NAMA;
-    private String FOTO;
-    private String ASAL_KOTA;
+    private String USERNAME;
+    private int AVATAR;
+    private String NAME;
+    private String FOLLOWER;
+    private String FOLLOWING;
+    private String COMPANY;
+    private String BIO;
 
 
     public ModelList(Parcel in) {
-        NAMA = in.readString();
-        FOTO = in.readString();
-        ASAL_KOTA = in.readString();
+        NAME = in.readString();
+        USERNAME = in.readString();
+        FOLLOWER = in.readString();
+        COMPANY = in.readString();
+        BIO = in.readString();
+        FOLLOWING = in.readString();
+        AVATAR = in.readInt();
     }
 
     public static final Creator<ModelList> CREATOR = new Creator<ModelList>() {
@@ -27,28 +36,60 @@ public class ModelList implements Parcelable {
         }
     };
 
-    public String getNAMA() {
-        return NAMA;
+    public String getNAME() {
+        return NAME;
     }
 
-    public void setNAMA(String NAMA) {
-        this.NAMA = NAMA;
+    public void setNAME(String NAME) {
+        this.NAME = NAME;
     }
 
-    public String getFOTO() {
-        return FOTO;
+    public String getUSERNAME() {
+        return USERNAME;
     }
 
-    public void setFOTO(String FOTO) {
-        this.FOTO = FOTO;
+    public void setUSERNAME(String USERNAME) {
+        this.USERNAME = USERNAME;
     }
 
-    public String getASAL_KOTA() {
-        return ASAL_KOTA;
+    public int getAVATAR() {
+        return AVATAR;
     }
 
-    public void setASAL_KOTA(String ASAL_KOTA) {
-        this.ASAL_KOTA = ASAL_KOTA;
+    public void setAVATAR(int AVATAR) {
+        this.AVATAR = AVATAR;
+    }
+
+    public String getFOLLOWER() {
+        return FOLLOWER;
+    }
+
+    public void setFOLLOWER(String FOLLOWER) {
+        this.FOLLOWER = FOLLOWER;
+    }
+
+    public String getFOLLOWING() {
+        return FOLLOWING;
+    }
+
+    public void setFOLLOWING(String FOLLOWING) {
+        this.FOLLOWING = FOLLOWING;
+    }
+
+    public String getCOMPANY() {
+        return COMPANY;
+    }
+
+    public void setCOMPANY(String COMPANY) {
+        this.COMPANY = COMPANY;
+    }
+
+    public String getBIO() {
+        return BIO;
+    }
+
+    public void setBIO(String BIO) {
+        this.BIO = BIO;
     }
 
     public static Creator<ModelList> getCREATOR() {
@@ -62,8 +103,12 @@ public class ModelList implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(NAMA);
-        dest.writeString(FOTO);
-        dest.writeString(ASAL_KOTA);
+        dest.writeString(NAME);
+        dest.writeString(FOLLOWER);
+        dest.writeString(FOLLOWING);
+        dest.writeString(COMPANY);
+        dest.writeString(BIO);
+        dest.writeString(USERNAME);
+        dest.writeInt(AVATAR);
     }
 }
