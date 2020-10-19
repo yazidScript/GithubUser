@@ -52,13 +52,13 @@ public class AdapterList extends RecyclerView.Adapter<AdapterList.ItemViewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context.getApplicationContext(), DetailActivity.class);
-                intent.putExtra("avatar",list.getAVATAR());
-                intent.putExtra("name",list.getNAME());
-                intent.putExtra("bio",list.getBIO());
-                intent.putExtra("company",list.getCOMPANY());
-                intent.putExtra("following",list.getFOLLOWING());
-                intent.putExtra("username",list.getUSERNAME());
-                intent.putExtra("follower",list.getFOLLOWER());
+                intent.putExtra("extra_list",list);
+//                intent.putExtra("name",list.getNAME());
+//                intent.putExtra("bio",list.getBIO());
+//                intent.putExtra("company",list.getCOMPANY());
+//                intent.putExtra("following",list.getFOLLOWING());
+//                intent.putExtra("username",list.getUSERNAME());
+//                intent.putExtra("follower",list.getFOLLOWER());
                 context.startActivity(intent);
             }
         });
