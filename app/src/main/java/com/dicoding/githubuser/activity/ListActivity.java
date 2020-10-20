@@ -18,7 +18,6 @@ public class ListActivity extends AppCompatActivity {
 
     private List<ModelList> mList;
     private adapter madapter;
-    //the recyclerview
     private RecyclerView recyclerView;
     private static final int TIME_LIMIT = 1500;
     private static long backPressed;

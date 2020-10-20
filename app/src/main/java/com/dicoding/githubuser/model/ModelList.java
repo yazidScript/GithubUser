@@ -4,7 +4,6 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class ModelList implements Parcelable {
-//    private int ID;
     private String USERNAME;
     private int AVATAR;
     private String NAME;
@@ -24,7 +23,6 @@ public class ModelList implements Parcelable {
     }
 
     public ModelList(Parcel in) {
-//        ID = in.readInt();
         USERNAME = in.readString();
         AVATAR = in.readInt();
         NAME = in.readString();
@@ -45,14 +43,6 @@ public class ModelList implements Parcelable {
             return new ModelList[size];
         }
     };
-//
-//    public int getID() {
-//        return ID;
-//    }
-//
-//    public void setID(int ID) {
-//        this.ID = ID;
-//    }
 
     public String getNAME() {
         return NAME;
@@ -121,7 +111,6 @@ public class ModelList implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-//        dest.writeInt(ID);
         dest.writeString(USERNAME);
         dest.writeInt(AVATAR);
         dest.writeString(NAME);
